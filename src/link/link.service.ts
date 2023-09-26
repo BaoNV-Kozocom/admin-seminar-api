@@ -34,7 +34,9 @@ export class LinkService {
       },
       select: ['icon'],
     });
-    await removeFile(oldUrlIcon.icon);
+    if (oldUrlIcon.icon) {
+      await removeFile(oldUrlIcon.icon);
+    }
     return await this.linkRepository.update(
       { id },
       {

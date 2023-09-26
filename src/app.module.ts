@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../../uploads'),
+      rootPath: join(__dirname, '../..'),
     }),
     TypeOrmModule.forRoot(dataSourceOptions),
     UserModule,
